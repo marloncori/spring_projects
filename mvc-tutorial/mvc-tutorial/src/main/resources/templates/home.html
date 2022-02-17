@@ -1,0 +1,15 @@
+<DOCTYPE! html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robot Page</title>
+</head>
+<body>
+    <h1> >>> Enter the information about your in the form below: </h1>
+        <form action="#" th:action="@{/robot}" th:object="${robot}" method="post">
+            <p> Robot name: <input type="text" th:field="*{name}"/></p>
+            <p> Robot type: <input type="text" th:field="*{type}"/></p>
+            <p><input type="submit" value="Submit"/></p>
+        </form>
+</body>
+</html>

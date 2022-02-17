@@ -1,0 +1,24 @@
+<DOCTYPE! html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Robots</title>
+</head>
+<body>
+   <div th:if="${!#lists.isEmpty(allRobots)}">
+        <h1> These are the robots saved up to now: </h1>
+        <table border="1">
+            <tr>
+                <th> ROBOT ID </th>
+                <th> ROBOT NAME </th>
+                <th> ROBOT TYPE </th>
+            </tr>
+            <tr th:each="robot: ${allRobots}" th:object="${Robot}">
+                <td th:text="${robot.id}"></td>
+                <td th:text="${robot.name}"></td>
+                <td th:text="${robot.type}"></td>
+            </tr>
+        </table>
+   </div>
+</body>
+</html>
